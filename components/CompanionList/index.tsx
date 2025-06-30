@@ -1,9 +1,7 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
@@ -15,10 +13,10 @@ import Image from "next/image";
 interface CompanionList {
     title: string,
     companions: Companion[],
-    classNames: string,
+    classNames?: string,
 }
 
-const CompanionList = ({title, companions, classNames}: CompanionListProps) => {
+const CompanionList = ({title, companions, classNames}: CompanionList) => {
     return (
         <article className={cn('companion-list', classNames)}>
             <h2 className="font-bold text-3xl">Recent Session</h2>
